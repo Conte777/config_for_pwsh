@@ -1,4 +1,7 @@
-# Plugins 
+# Установка всех зависимостей
+`Install-Module -Name PSReadLine -Force; Install-Module -Name PsFzf -Force; Install-Module -Name Terminal-Icons -Force; winget install fzf`
+
+# Плагины 
 
 ## oh-my-posh
 
