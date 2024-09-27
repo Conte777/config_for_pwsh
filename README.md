@@ -1,5 +1,5 @@
 # Установка всех зависимостей
-`Install-Module -Name PSReadLine, PsFzf, Terminal-Icons -Force -AllowClobber; winget install fzf`
+`Install-Module -Name PSReadLine, Terminal-Icons -Force -AllowClobber; winget install fzf ajeetdsouza.zoxide; Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))`
 
 # Плагины 
 
@@ -11,10 +11,10 @@
 
 Для подсказок при вводе команды
 
-**PsFzf**
-
-Для шорт катов. Alt+t помощь при вводе полного пути до файла. Alt+r помощь при поиске в истории команд
-
 **Terminal-Icons**
 
 Для красивых иконок 
+
+**zoxide**
+
+Улучшение команды cd
