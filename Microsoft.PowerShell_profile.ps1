@@ -16,6 +16,7 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 
 Import-Module -Name Terminal-Icons
 
+echo "You can enter cdi to see a list of options"
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 Set-Alias -Name cd -Value z -Option AllScope
 Set-Alias -Name cdi -Value zi -Option AllScope
