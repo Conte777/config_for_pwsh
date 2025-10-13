@@ -10,7 +10,7 @@ Set-PSReadLineKeyHandler -Chord Shift+Ctrl+RightArrow -Function SelectNextWord
 Set-PSReadLineKeyHandler -Chord Shift+Ctrl+LeftArrow -Function SelectBackwardWord
 
 
-oh-my-posh init pwsh --config 'amro.omp.json' | Invoke-Expression
+oh-my-posh init pwsh --config https://github.com/Conte777/config_for_pwsh.git | Invoke-Expression
 
 Import-Module -Name PSReadLine
 Set-PSReadLineOption -PredictionViewStyle ListView
