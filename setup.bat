@@ -19,7 +19,7 @@ if %errorLevel% neq 0 (
     echo [ERROR] Administrator rights required!
     echo.
     echo Restarting with administrator rights...
-    powershell -Command "Start-Process '%~f0' -Verb RunAs"
+    powershell -Command "Start-Process cmd -ArgumentList '/k','\"%~f0\"' -Verb RunAs"
     exit /b
 )
 
@@ -90,7 +90,20 @@ echo.
 :: ============================================
 :: 5. Install dependencies
 :: ============================================
-echo Installing dependencies...
+echo Do you want to install dependencies?
+echo This includes: PSReadLine, Terminal-Icons, fzf, zoxide, oh-my-posh
+echo.
+choice /C YN /M "Install dependencies (Y/N)"
+set "INSTALL_CHOICE=%ERRORLEVEL%"
+echo.
+
+if %INSTALL_CHOICE%==2 (
+    echo [INFO] Skipping dependencies installation
+    echo.
+    goto :skip_dependencies
+)
+
+echo [INFO] Starting dependencies installation...
 echo.
 
 echo Installing PowerShell modules (PSReadLine, Terminal-Icons)...
@@ -131,6 +144,8 @@ echo.
 
 echo [OK] Dependencies installation completed
 echo.
+
+:skip_dependencies
 
 :: ============================================
 :: 6. Check target locations
