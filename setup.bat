@@ -29,7 +29,7 @@ echo.
 :: ============================================
 :: 2. Define paths
 :: ============================================
-set "SOURCE_DIR=d:\Projects\config_for_pwsh"
+set "SOURCE_DIR=d:\Projects\config_for_pwsh\src"
 set "PROFILE_SOURCE=%SOURCE_DIR%\Microsoft.PowerShell_profile.ps1"
 set "SETTINGS_SOURCE=%SOURCE_DIR%\settings.json"
 set "OMP_SOURCE=%SOURCE_DIR%\amro.omp.json"
